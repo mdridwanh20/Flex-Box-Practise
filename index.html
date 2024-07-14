@@ -3,10 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flex Box Practice</title>
+
+    <style>
+        /* flex direction container */
+        .flex-container, .flex-wrap-container, .justify-container, .align-container, .align-content-container{
+            max-width: 700px;
+            height: 150px;
+            background-color: antiquewhite;
+            margin: 20px auto;
+            display: flex;
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .item{
+            background-color: tomato;
+            padding: 10px;
+            border: 1px solid #fff;
+        }
+
+        /* .item{
+            padding: 0px 10px;
+        } */
+
+        .items-1{
+            flex-direction: column;
+        }
+        .items-2{
+            flex-direction: column-reverse;
+        }
+        .items-3{
+            flex-direction: row;
+        }
+        .items-4{
+            flex-direction: row-reverse;
+        }
+
+        .hide{
+            display: none;
+        }
+
+
+      
+        /* flex wrap here */
+        .wrap-01{
+            flex-wrap: wrap;
+        }
+        .wrap-02{
+            flex-wrap: nowrap;
+        }
+        .wrap-03{
+            flex-wrap: wrap-reverse;
+        }
+        .wrap-04{
+            flex-wrap: row wrap;
+        }
+
+
+        /* justify content */
+        .justify-01{
+            justify-content: center;
+        }
+        .justify-02{
+            justify-content: flex-start;
+        }
+        .justify-03{
+            justify-content: flex-end;
+        }
+        .justify-04{
+            justify-content: space-around ;
+        }
+        .justify-05{
+            justify-content: space-evenly;
+        }
+        .justify-06{
+            justify-content: space-between;
+        }
+
+
+
+        /* align items */
+        .align-01{
+            align-items: center;
+        }
+        .align-02{
+            align-items: flex-start;
+        }
+        .align-03{
+            align-items: flex-end;
+        }
+        .align-04{
+            align-items: stretch;
+        }
+        .align-05{
+            align-items: baseline;
+        }
+
+
+        /* align content */
+        .align-items-01{
+            align-content: space-between;
+        }
+        .align-items-02{
+            align-content: space-around;
+        }
+        .align-items-03{
+            align-content: stretch;
+        }
+        .align-items-04{
+            align-content: center;
+        }
+        .align-items-05{
+            align-content: flex-start;
+        }
+        .align-items-06{
+            align-content: flex-end;
+        }
+
+
+    </style>
+
 </head>
 <body>
-    <h2>flex practise</h2>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. In harum quia, obcaecati dolorum quidem cum eaque quo placeat iste eligendi.
+    
+    <section id="flex-direction" class="hide">
+        <h1 style="text-align: center;">Flex Container</h1>
+    <h3 style="text-align: center;">flex-direction</h3>
+
+    <div class="flex-container items-1">
+        <h4>flex-direction: column;</h4>
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+    </div>
+
+    <div class="flex-container items-2">
+        <h3>flex-direction: column-reverse;</h3>
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+    </div>
+
+    <div class="flex-container items-3">
+        <h3>flex-direction: row;</h3>
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+    </div>
+    <div class="flex-container items-4">
+        <h3>flex-direction: row-reverse;</h3>
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+    </div>
+
+    </section>
+
+
+    <section id="The-flex-wrap-Property" class="hide">
+        <div class="flex-wrap-container wrap-01">
+            <h3>wrap name</h3>
+            <div class="item">wrap item 1</div>
+            <div class="item">wrap item 2</div>
+            <div class="item">wrap item 3</div>
+            <div class="item">wrap item 4</div>
+        </div>
+        <div class="flex-wrap-container wrap-02">
+            <h3>wrap name</h3>
+            <div class="item">wrap item 1</div>
+            <div class="item">wrap item 2</div>
+            <div class="item">wrap item 3</div>
+            <div class="item">wrap item 4</div>
+        </div>
+        <div class="flex-wrap-container wrap-03">
+            <h3>wrap name</h3>
+            <div class="item">wrap item 1</div>
+            <div class="item">wrap item 2</div>
+            <div class="item">wrap item 3</div>
+            <div class="item">wrap item 4</div>
+        </div>
+        <div class="flex-wrap-container wrap-04">
+            <h3>wrap name</h3>
+            <div class="item">wrap item 1</div>
+            <div class="item">wrap item 2</div>
+            <div class="item">wrap item 3</div>
+            <div class="item">wrap item 4</div>
+        </div>
+    </section>
+
+    <section class="justify-content hide">
+        <div class="justify-container justify-01">
+            <h3>justify-content: center;</h3>
+            <div class="item ">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+        </div>
+        <div class="justify-container justify-02">
+            <h3>justify-content: flex-start;</h3>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+        </div>
+        <div class="justify-container justify-03">
+            <h3>justify-content: flex-end;</h3>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+        </div>
+        <div class="justify-container justify-04">
+            <h3>justify-content: space-around ;</h3>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+        </div>
+
+        <div class="justify-container justify-05">
+            <h3>justify-content: space-evenly;</h3>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+        </div>
+        <div class="justify-container justify-06">
+            <h3>justify-content: space-between;</h3>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+            <div class="item">justify item</div>
+        </div>
+
+    </section>
+
+
+    <section class="align-item hide">
+        <div class="align-container align-01">
+            <h3>align name</h3>
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <div class="align-container align-02">
+            <h3>align name</h3>
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <div class="align-container align-03">
+            <h3>align name</h3>
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <div class="align-container align-04">
+            <h3>align name</h3>
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <div class="align-container align-05">
+            <h3>align name</h3>
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+    </section>
+
+
+    <section class="align-content">
+
+        <div class="align-content-container align-items-01">
+            <h3>align name</h3>
+            <div class="item">item -1</div>
+            <div class="item">item -2</div>
+            <div class="item">item -3</div>
+            <div class="item">item -4</div>
+            <div class="item">item -5</div>
+            <div class="item">item -6</div>
+        </div>
+
+        <div class="align-content-container align-items-02">
+            <h3>align name</h3>
+            <div class="item">item -1</div>
+            <div class="item">item -2</div>
+            <div class="item">item -3</div>
+            <div class="item">item -4</div>
+            <div class="item">item -5</div>
+            <div class="item">item -6</div>
+        </div>
+
+        <div class="align-content-container align-items-03">
+            <h3>align name</h3>
+            <div class="item">item -1</div>
+            <div class="item">item -2</div>
+            <div class="item">item -3</div>
+            <div class="item">item -4</div>
+            <div class="item">item -5</div>
+            <div class="item">item -6</div>
+        </div>
+
+        <div class="align-content-container align-items-04">
+            <h3>align name</h3>
+            <div class="item">item -1</div>
+            <div class="item">item -2</div>
+            <div class="item">item -3</div>
+            <div class="item">item -4</div>
+            <div class="item">item -5</div>
+            <div class="item">item -6</div>
+        </div>
+
+        <div class="align-content-container align-items-05">
+            <h3>align name</h3>
+            <div class="item">item -1</div>
+            <div class="item">item -2</div>
+            <div class="item">item -3</div>
+            <div class="item">item -4</div>
+            <div class="item">item -5</div>
+            <div class="item">item -6</div>
+        </div>
+
+        <div class="align-content-container align-items-06">
+            <h3>align name</h3>
+            <div class="item">item -1</div>
+            <div class="item">item -2</div>
+            <div class="item">item -3</div>
+            <div class="item">item -4</div>
+            <div class="item">item -5</div>
+            <div class="item">item -6</div>
+        </div>
+        
+    </section>
+
+
+
+
+
+
+
+
 </body>
 </html>
